@@ -7,6 +7,7 @@ import HowToBuy2D from '@/components/sections/layouts/howtobuy/2DHTB';
 import BigNumberTokenomics from '@/components/sections/layouts/tokenomics/BigNumberTokenomics';
 import ImageFAQ from '@/components/sections/layouts/faq/ImageFAQ';
 import FooterBase from '@/components/footer/FooterBase';
+import { Star } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -42,7 +43,7 @@ export default function Home() {
         <BigNumberTokenomics
           title="Tokenomics"
           description="Learn about our loyalty tokens and their benefits."
-          kpiItems={[{ value: '100k', description: 'Total Tokens issued', longDescription: 'Our loyalty tokens are designed to reward our users.', icon: IconMap.Star }]}  // mapped icon to correct type
+          kpiItems={[{ value: '100k', description: 'Total Tokens issued', longDescription: 'Our loyalty tokens are designed to reward our users.', icon: Star }]}  // mapped icon to correct type
         />
       </div>
       <div id="faq" data-section="faq" className="scroll-mt-24">
