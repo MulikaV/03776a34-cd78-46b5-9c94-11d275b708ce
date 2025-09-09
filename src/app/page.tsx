@@ -7,6 +7,7 @@ import HowToBuy2D from '@/components/sections/layouts/howtobuy/2DHTB';
 import BigNumberTokenomics from '@/components/sections/layouts/tokenomics/BigNumberTokenomics';
 import ImageFAQ from '@/components/sections/layouts/faq/ImageFAQ';
 import FooterBase from '@/components/footer/FooterBase';
+import { ArrowRight } from 'lucide-react';
 
 const navItems = [
   { name: 'Hero', id: 'hero' },
@@ -57,9 +58,9 @@ export default function Home() {
           title="Tokenomics Overview"
           description="Learn about our loyalty programs and retro-credits."
           kpiItems={[
-            { value: "300K", description: "Tokens in circulation", longDescription: "Count of active tokens", icon: 'LucideIcon' },
-            { value: "75%", description: "Community winners", longDescription: "Earned by loyal players", icon: 'LucideIcon' },
-            { value: "0.1", description: "Cost per token", longDescription: "In USD", icon: 'LucideIcon' },
+            { value: "300K", description: "Tokens in circulation", longDescription: "Count of active tokens", icon: ArrowRight },
+            { value: "75%", description: "Community winners", longDescription: "Earned by loyal players", icon: ArrowRight },
+            { value: "0.1", description: "Cost per token", longDescription: "In USD", icon: ArrowRight },
           ]}
         />
       </div>
