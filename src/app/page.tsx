@@ -1,37 +1,28 @@
 "use client";
-
 import { SiteThemeProvider } from '@/components/sections/ThemeProvider';
 import NavbarLayoutSplitBottom from '@/components/navigation/NavbarLayoutSplitBottom/NavbarLayoutSplitBottom';
 import FrameHero from '@/components/sections/layouts/hero/FrameHero';
 import CtaAbout from '@/components/sections/layouts/about/CtaAbout';
-import ImageFAQ from '@/components/sections/layouts/faq/ImageFAQ';
 import HowToBuy2D from '@/components/sections/layouts/howtobuy/2DHTB';
 import BigNumberTokenomics from '@/components/sections/layouts/tokenomics/BigNumberTokenomics';
+import ImageFAQ from '@/components/sections/layouts/faq/ImageFAQ';
 import FooterBase from '@/components/footer/FooterBase';
-import { Users, Shield } from 'lucide-react';
 
 export default function Home() {
   return (
     <SiteThemeProvider theme={{ styleVariant: 'funAndTrendy', colorTemplate: 1, textAnimation: 'slide' }}>
-      <NavbarLayoutSplitBottom
+      <NavbarLayoutSplitBottom 
         logoSrc="/images/logo.svg"
-        logoWidth={150}
-        logoHeight={50}
+        logoWidth={80}
+        logoHeight={32}
         buttonText="Shop Now"
-        onButtonClick={() => {}}
-        navItems={[
-          { name: 'Hero', id: 'hero' },
-          { name: 'About', id: 'about' },
-          { name: 'FAQ', id: 'faq' },
-          { name: 'How to Buy', id: 'how-to-buy' },
-          { name: 'Tokenomics', id: 'tokenomics' },
-          { name: 'Footer', id: 'footer' }
-        ]}
+        onButtonClick={() => { /* handle click */ }}
+        navItems={[{ name: 'Pixel Arcade', id: 'hero' }, { name: 'About', id: 'about' }, { name: 'How to Buy', id: 'how-to-buy' }, { name: 'Tokenomics', id: 'tokenomics' }, { name: 'FAQ', id: 'faq' }, { name: 'Footer', id: 'footer' }]}
       />
       <div id="hero" data-section="hero" className="scroll-mt-24">
         <FrameHero
-          title="Welcome to Pixel Arcade Store"
-          description="Dive into awesome pixel-art adventures!"
+          title="Welcome to Pixel Arcade"
+          description="Dive into our pixel-art universe and enjoy retro gaming experiences."
           primaryButtonText="Get Started"
           secondaryButtonText="Learn More"
         />
@@ -39,43 +30,34 @@ export default function Home() {
       <div id="about" data-section="about" className="scroll-mt-24">
         <CtaAbout
           title="About Pixel Arcade"
-          descriptions={["Retro gaming experience like no other!", "Join us for a journey back in time."]}
-        />
-      </div>
-      <div id="faq" data-section="faq" className="scroll-mt-24">
-        <ImageFAQ
-          items={[
-            { title: 'What is Pixel Arcade?', content: 'A gaming platform dedicated to the retro vibe.' },
-            { title: 'How do I purchase pixels?', content: 'Simply follow the steps outlined in our how-to-buy section.' },
-            { title: 'Do you offer refunds?', content: 'Yes, check our policy in the footer.' }
-          ]}
+          descriptions={["We bring you the nostalgia of classic gaming with modern features.", "Our mission is to create fun and engaging pixel-art experiences."]}
         />
       </div>
       <div id="how-to-buy" data-section="how-to-buy" className="scroll-mt-24">
-        <HowToBuy2D variant="simple" />
+        <HowToBuy2D
+          variant="simple"
+        />
       </div>
       <div id="tokenomics" data-section="tokenomics" className="scroll-mt-24">
         <BigNumberTokenomics
           title="Tokenomics"
-          description="Explore our unique token distribution!"
-          kpiItems={[
-            { value: '500,000', description: 'Total Tokens', longDescription: 'A comprehensive overview of our token distribution.', icon: Users },
-            { value: '30%', description: 'Market Reserve', longDescription: 'Tokens reserved for market incentives.', icon: Shield }
-          ]}
+          description="Learn about our loyalty tokens and their benefits."
+          kpiItems={[{ value: '100k', description: 'Total Tokens issued', longDescription: 'Our loyalty tokens are designed to reward our users.', icon: 'Star' }]}
+        />
+      </div>
+      <div id="faq" data-section="faq" className="scroll-mt-24">
+        <ImageFAQ
+          items={[{ title: 'What is Pixel Arcade?', content: 'It’s a platform for retro gaming.' }, { title: 'How can I buy tokens?', content: 'You can purchase directly on our site.' }]}
         />
       </div>
       <div id="footer" data-section="footer" className="scroll-mt-24">
         <FooterBase
           logoSrc="/images/logo.svg"
-          logoWidth={150}
-          logoHeight={50}
-          columns={[
-            { title: 'Links', items: [{ label: 'Home', onClick: () => {} }, { label: 'FAQ', onClick: () => {} }] },
-            { title: 'Contact', items: [{ label: 'Support', onClick: () => {} }, { label: 'Feedback', onClick: () => {} }] },
-            { title: 'Social', items: [{ label: 'Twitter', onClick: () => {} }, { label: 'Discord', onClick: () => {} }] }
-          ]}
-          copyrightText="© 2023 Pixel Arcade. All rights reserved."
-          onPrivacyClick={() => {}}
+          logoWidth={80}
+          logoHeight={32}
+          columns={[{ title: 'Links', items: [{ label: 'Home', onClick: () => {} }, { label: 'Contact', onClick: () => {} }] }, { title: 'Support', items: [{ label: 'FAQ', onClick: () => {} }, { label: 'Terms', onClick: () => {} }] }]} 
+          copyrightText="© 2023 Pixel Arcade"
+          onPrivacyClick={() => { /* handle click */ }}
         />
       </div>
     </SiteThemeProvider>
