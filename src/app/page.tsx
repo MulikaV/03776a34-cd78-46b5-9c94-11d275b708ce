@@ -42,7 +42,7 @@ export default function Home() {
         <BigNumberTokenomics
           title="Tokenomics"
           description="Learn about our loyalty tokens and their benefits."
-          kpiItems={[{ value: '100k', description: 'Total Tokens issued', longDescription: 'Our loyalty tokens are designed to reward our users.', icon: 'Star' }]}
+          kpiItems={[{ value: '100k', description: 'Total Tokens issued', longDescription: 'Our loyalty tokens are designed to reward our users.', icon: IconMap.Star }]}  // mapped icon to correct type
         />
       </div>
       <div id="faq" data-section="faq" className="scroll-mt-24">
