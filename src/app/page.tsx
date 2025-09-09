@@ -8,6 +8,7 @@ import ImageFAQ from '@/components/sections/layouts/faq/ImageFAQ';
 import HowToBuy2D from '@/components/sections/layouts/howtobuy/2DHTB';
 import BigNumberTokenomics from '@/components/sections/layouts/tokenomics/BigNumberTokenomics';
 import FooterBase from '@/components/footer/FooterBase';
+import { Users, Shield } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -56,11 +57,10 @@ export default function Home() {
       <div id="tokenomics" data-section="tokenomics" className="scroll-mt-24">
         <BigNumberTokenomics
           title="Tokenomics"
-          description="Explore our unique token distribution!
-          "
+          description="Explore our unique token distribution!"
           kpiItems={[
-            { value: '500,000', description: 'Total Tokens', longDescription: 'A comprehensive overview of our token distribution.', icon: "Users" },
-            { value: '30%', description: 'Market Reserve', longDescription: 'Tokens reserved for market incentives.', icon: "Shield" }
+            { value: '500,000', description: 'Total Tokens', longDescription: 'A comprehensive overview of our token distribution.', icon: Users },
+            { value: '30%', description: 'Market Reserve', longDescription: 'Tokens reserved for market incentives.', icon: Shield }
           ]}
         />
       </div>
